@@ -40,12 +40,12 @@ LCD_Printf("12MHz");
 
         // Check switches to change frequency
       //If sw1 is on press..... clock frequency will send to 120
-        if ((GPIODATA_J & 0x01) == 0 || (Y > 800  && Y<1200)) {
+        if ((GPIODATA_J & 0x01) == 0 || (Y > 700  && Y<1000) && (X > 900  && X<1300)) {
           freq = PRESET1;
             PLL_Init(freq); // 120 MHz
         } 
               //If sw2 is on press..... clock frequency will send to 12
-         else if ((GPIODATA_J & 0x02) == 0 || (Y > 400  && Y < 800)) {
+         else if ((GPIODATA_J & 0x02) == 0 || (Y > 700  && Y < 1000) && (X > 1950 && X<2050)) {
             freq = PRESET3;
             PLL_Init(freq); // 12 MHz
         }
