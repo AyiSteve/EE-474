@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>2785018006</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\Debug\Obj\Lab3_1bInits.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\ReadTemperatureWithADC.pbi</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\lab3.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\..\SSD2119\SSD2119_Display.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSD2119_Touch.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lab3_1bInits.__cstat.et</file>
+            <file>$PROJ_DIR$\Lab3_1bInits.h</file>
+            <file>$PROJ_DIR$\ReadTemperatureWithADC.c</file>
+            <file>$PROJ_DIR$\..\SSD2119\SSD2119_Touch.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\..\SSD2119\SSD2119_Display.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\ReadTemperatureWithADC.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSD2119_Display.__cstat.et</file>
+            <file>$PROJ_DIR$\..\SSD2119\SSD2119_Touch.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cstartup_M.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cstartup_M.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lab3_1bInits.pbi</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C1294NC.icf</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSD2119_Display.o</file>
+            <file>$PROJ_DIR$\..\cstartup_M.c</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\Lab3_1bInits.c</file>
+            <file>$PROJ_DIR$\..\SSD2119\tm4c1294ncpdt.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSD2119_Touch.pbi</file>
+            <file>$PROJ_DIR$\Debug\Exe\task1c.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\ReadTemperatureWithADC.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSD2119_Display.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$PROJ_DIR$\Debug\List\task1c.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\cstartup_M.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\task1c.pbd</file>
+            <file>$PROJ_DIR$\Debug\Obj\SSD2119_Touch.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\..\task1b\Lab3_1bInits.c</file>
+            <file>$PROJ_DIR$\..\task1b\ReadTemperatureWithADC.c</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 30 35</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\SSD2119\SSD2119_Display.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 33</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 14</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 4 28 34 39 11 12 23 17 32</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 12 28 4 11 39 23 17 32</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\ReadTemperatureWithADC.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 1</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 13</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 39 8 4 12 34 11 15 28 23 17 32 3</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 3 4 11 39 23 17 32 15 12 28 8</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\SSD2119\SSD2119_Touch.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 29</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 6</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 38</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 23 17 15 39 32 28 11 4</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 4 11 39 23 17 32 28 15</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\cstartup_M.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 36</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 19</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Lab3_1bInits.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 20</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 7</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32 11 3 17 8 4 39 23</file>
+                </tool>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 8 3 4 11 39 23 17 32</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\task1c.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 35</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 22 18 0 31 24 6 16 26 21 2</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

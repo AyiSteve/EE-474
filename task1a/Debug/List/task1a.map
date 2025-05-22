@@ -1,0 +1,351 @@
+###############################################################################
+#
+# IAR ELF Linker V8.11.3.13950/W32 for ARM                21/May/2025  17:26:20
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  D:\Desktop\Lab474\lab4\task1a\Debug\Exe\task1a.out
+#    Map file     =  D:\Desktop\Lab474\lab4\task1a\Debug\List\task1a.map
+#    Command line =  
+#        -f C:\Users\steve\AppData\Local\Temp\EWF7A9.tmp
+#        (D:\Desktop\Lab474\lab4\task1a\Debug\Obj\main.o
+#        D:\Desktop\Lab474\lab4\task1a\Debug\Obj\SSD2119_Display.o
+#        D:\Desktop\Lab474\lab4\task1a\Debug\Obj\SSD2119_Touch.o -o
+#        D:\Desktop\Lab474\lab4\task1a\Debug\Exe\task1a.out --map
+#        D:\Desktop\Lab474\lab4\task1a\Debug\List\task1a.map --config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\config\linker\TexasInstruments\TM4C1292NC.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x000fffff] { ro };
+define block CSTACK with size = 32K, alignment = 8 { };
+define block HEAP with size = 64K, alignment = 8 { };
+"P2":  place in [from 0x20000000 to 0x2003ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A0":                                       0x40
+  .intvec            ro code  0x00000000    0x40  vector_table_M.o [5]
+                            - 0x00000040    0x40
+
+"P1":                                     0x29dc
+  .text              ro code  0x00000040   0xdd6  xprintffull_nomb.o [3]
+  .text              ro code  0x00000e16     0x2  vector_table_M.o [5]
+  .text              ro code  0x00000e18    0x16  strchr.o [5]
+  .text              ro code  0x00000e30    0x44  xfail_s.o [3]
+  .text              ro code  0x00000e74    0x36  strlen.o [5]
+  .text              ro code  0x00000eac    0x58  memchr.o [5]
+  .text              ro code  0x00000f04    0xee  I64DivMod.o [5]
+  .text              ro code  0x00000ff4   0x1a2  DblMul.o [4]
+  .text              ro code  0x00001198    0x76  ABImemcpy_unaligned.o [5]
+  .text              ro code  0x00001210    0x70  frexp.o [4]
+  .text              ro code  0x00001280    0x2e  DblCmpLe.o [4]
+  .text              ro code  0x000012b0    0x2e  DblCmpGe.o [4]
+  .text              ro code  0x000012e0   0x13a  ldexp.o [4]
+  .text              ro code  0x0000141c    0x3a  DblToS32.o [4]
+  .text              ro code  0x00001458    0x22  S32ToDbl.o [4]
+  .text              ro code  0x0000147c    0xe2  DblSub.o [4]
+  .text              ro code  0x00001560   0x246  DblDiv.o [4]
+  .text              ro code  0x000017a8    0x28  DblToU32.o [4]
+  .text              ro code  0x000017d0    0x1a  U32ToDbl.o [4]
+  .text              ro code  0x000017ea     0x6  abort.o [3]
+  .text              ro code  0x000017f0     0x2  I64DivZer.o [5]
+  .text              ro code  0x000017f4   0x178  DblAdd.o [4]
+  .text              ro code  0x0000196c    0x14  exit.o [6]
+  .text              ro code  0x00001980    0x68  iarttio.o [6]
+  .text              ro code  0x000019e8     0x8  XShttio.o [3]
+  .text              ro code  0x000019f0   0xbf8  SSD2119_Display.o [1]
+  .text              ro code  0x000025e8    0x20  DblCmpEq.o [4]
+  .text              ro code  0x00002608    0x28  printf.o [3]
+  .rodata            const    0x00002630   0x1e0  SSD2119_Display.o [1]
+  .text              ro code  0x00002810    0x60  main.o [1]
+  .text              ro code  0x00002870    0x38  packbits_init_single.o [5]
+  .text              ro code  0x000028a8    0x28  data_init.o [5]
+  .text              ro code  0x000028d0    0x22  fpinit_M.o [4]
+  .text              ro code  0x000028f2    0x22  iarwrite.o [6]
+  .iar.init_table    const    0x00002914    0x10  - Linker created -
+  .rodata            const    0x00002924    0x20  SSD2119_Display.o [1]
+  .text              ro code  0x00002944    0x20  putchar.o [3]
+  .text              ro code  0x00002964    0x10  write.o [6]
+  .text              ro code  0x00002974    0x1e  dwrite.o [6]
+  .text              ro code  0x00002992    0x20  iarwstd.o [6]
+  .text              ro code  0x000029b4    0x1a  cmain.o [5]
+  .text              ro code  0x000029ce     0x4  low_level_init.o [3]
+  .text              ro code  0x000029d2     0x4  exit.o [3]
+  .text              ro code  0x000029d8     0xa  cexit.o [5]
+  .text              ro code  0x000029e2    0x16  xprout.o [3]
+  .rodata            const    0x000029f8     0xc  main.o [1]
+  .text              ro code  0x00002a04     0xc  cstartup_M.o [5]
+  .rodata            const    0x00002a10     0x8  SSD2119_Display.o [1]
+  .rodata            const    0x00002a18     0x0  packbits_init_single.o [5]
+  Initializer bytes  const    0x00002a18     0x4  <for P2-1>
+                            - 0x00002a1c  0x29dc
+
+"P2", part 1 of 2:                          0x14
+  P2-1                        0x20000000    0x14  <Init block>
+    .data            inited   0x20000000     0x8  XShttio.o [3]
+    .bss             inited   0x20000008     0x4  xfail_s.o [3]
+    .bss             inited   0x2000000c     0x2  SSD2119_Display.o [1]
+    .bss             inited   0x2000000e     0x2  SSD2119_Display.o [1]
+    .bss             inited   0x20000010     0x2  SSD2119_Display.o [1]
+    .bss             inited   0x20000012     0x2  SSD2119_Display.o [1]
+                            - 0x20000014    0x14
+
+"P2", part 2 of 2:                        0x8000
+  CSTACK                      0x20000018  0x8000  <Block>
+    CSTACK           uninit   0x20000018  0x8000  <Block tail>
+                            - 0x20008018  0x8000
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x4 (20% of destination):
+          0x00002a18   0x4
+    1 destination range, total size 0x14:
+          0x20000000  0x14
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+D:\Desktop\Lab474\lab4\task1a\Debug\Obj: [1]
+    SSD2119_Display.o         3 064      522        8
+    main.o                       96       12
+    -------------------------------------------------
+    Total:                    3 160      534        8
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    XShttio.o                     8        1        8
+    abort.o                       6
+    exit.o                        4
+    low_level_init.o              4
+    printf.o                     40
+    putchar.o                    32
+    xfail_s.o                    68        1        4
+    xprintffull_nomb.o        3 542
+    xprout.o                     22
+    -------------------------------------------------
+    Total:                    3 726        2       12
+
+m7M_tls.a: [4]
+    DblAdd.o                    376
+    DblCmpEq.o                   32
+    DblCmpGe.o                   46
+    DblCmpLe.o                   46
+    DblDiv.o                    582
+    DblMul.o                    418
+    DblSub.o                    226
+    DblToS32.o                   58
+    DblToU32.o                   40
+    S32ToDbl.o                   34
+    U32ToDbl.o                   26
+    fpinit_M.o                   34
+    frexp.o                     112
+    ldexp.o                     314
+    -------------------------------------------------
+    Total:                    2 344
+
+rt7M_tl.a: [5]
+    ABImemcpy_unaligned.o       118
+    I64DivMod.o                 238
+    I64DivZer.o                   2
+    cexit.o                      10
+    cmain.o                      26
+    cstartup_M.o                 12
+    data_init.o                  40
+    memchr.o                     88
+    packbits_init_single.o       56
+    strchr.o                     22
+    strlen.o                     54
+    vector_table_M.o             66
+    -------------------------------------------------
+    Total:                      732
+
+shb_l.a: [6]
+    dwrite.o                     30
+    exit.o                       20
+    iarttio.o                   104
+    iarwrite.o                   34
+    iarwstd.o                    32
+    write.o                      16
+    -------------------------------------------------
+    Total:                      236
+
+    Gaps                         30
+    Linker created                        16   32 768
+-----------------------------------------------------
+    Grand Total:             10 228      552   32 788
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x00002914          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00002924          --   Gb  - Linker created -
+?main                   0x000029b5         Code  Gb  cmain.o [5]
+ASCII                   0x00002630  0x1e0  Data  Lc  SSD2119_Display.o [1]
+CSTACK$$Base            0x20000018          --   Gb  - Linker created -
+CSTACK$$Limit           0x20008018          --   Gb  - Linker created -
+Color4                  0x00002924   0x20  Data  Gb  SSD2119_Display.o [1]
+LCD_ColorFill           0x00002051   0x16  Code  Gb  SSD2119_Display.o [1]
+LCD_DrawFilledRect      0x0000256d   0x60  Code  Gb  SSD2119_Display.o [1]
+LCD_DrawPixel           0x00002539   0x34  Code  Gb  SSD2119_Display.o [1]
+LCD_GPIOInit            0x000019f1  0x19c  Code  Lc  SSD2119_Display.o [1]
+LCD_Init                0x00001e85  0x1ac  Code  Gb  SSD2119_Display.o [1]
+LCD_PrintBinary         0x0000233f   0x8c  Code  Gb  SSD2119_Display.o [1]
+LCD_PrintChar           0x00002067   0xe6  Code  Gb  SSD2119_Display.o [1]
+LCD_PrintFloat          0x000023cb   0xde  Code  Gb  SSD2119_Display.o [1]
+LCD_PrintHex            0x000022cf   0x70  Code  Gb  SSD2119_Display.o [1]
+LCD_PrintInteger        0x0000226f   0x60  Code  Gb  SSD2119_Display.o [1]
+LCD_PrintString         0x0000214d   0x1c  Code  Gb  SSD2119_Display.o [1]
+LCD_Printf              0x0000219f   0xd0  Code  Gb  SSD2119_Display.o [1]
+LCD_SetBackgroundColor  0x0000218b   0x14  Code  Gb  SSD2119_Display.o [1]
+LCD_SetCursor           0x00002169    0xe  Code  Gb  SSD2119_Display.o [1]
+LCD_SetTextColor        0x00002177   0x14  Code  Gb  SSD2119_Display.o [1]
+LCD_WriteCommand        0x00001b8d  0x15a  Code  Lc  SSD2119_Display.o [1]
+LCD_WriteData           0x00001ce7  0x19e  Code  Lc  SSD2119_Display.o [1]
+LoadInt                 0x000001df   0x7a  Code  Lc  xprintffull_nomb.o [3]
+Region$$Table$$Base     0x00002914          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00002924          --   Gb  - Linker created -
+_GenldFullNoMb          0x00000b43  0x248  Code  Lc  xprintffull_nomb.o [3]
+_LdtobFullNoMb          0x00000727  0x3f0  Code  Lc  xprintffull_nomb.o [3]
+_LitobFullNoMb          0x000005cb  0x116  Code  Lc  xprintffull_nomb.o [3]
+_PrintfFullNoMb         0x00000041  0x190  Code  Gb  xprintffull_nomb.o [3]
+_Prout                  0x000029e3   0x16  Code  Gb  xprout.o [3]
+_PutcharsFullNoMb       0x00000d8b   0x2e  Code  Lc  xprintffull_nomb.o [3]
+_PutfldFullNoMb         0x00000259  0x264  Code  Lc  xprintffull_nomb.o [3]
+_PuttxtFullNoMb         0x000004bd  0x10e  Code  Lc  xprintffull_nomb.o [3]
+__aeabi_cdcmpeq         0x000025e9         Code  Gb  DblCmpEq.o [4]
+__aeabi_cdcmple         0x00001281         Code  Gb  DblCmpLe.o [4]
+__aeabi_cdrcmple        0x000012b1         Code  Gb  DblCmpGe.o [4]
+__aeabi_d2iz            0x0000141d         Code  Gb  DblToS32.o [4]
+__aeabi_d2uiz           0x000017a9         Code  Gb  DblToU32.o [4]
+__aeabi_dadd            0x000017f5         Code  Gb  DblAdd.o [4]
+__aeabi_ddiv            0x00001561         Code  Gb  DblDiv.o [4]
+__aeabi_dmul            0x00000ff5         Code  Gb  DblMul.o [4]
+__aeabi_dsub            0x0000147d         Code  Gb  DblSub.o [4]
+__aeabi_i2d             0x00001459         Code  Gb  S32ToDbl.o [4]
+__aeabi_ldiv0           0x000017f1         Code  Gb  I64DivZer.o [5]
+__aeabi_ui2d            0x000017d1         Code  Gb  U32ToDbl.o [4]
+__aeabi_uldivmod        0x00000f05         Code  Gb  I64DivMod.o [5]
+__cmain                 0x000029b5         Code  Gb  cmain.o [5]
+__dwrite                0x00002975   0x1e  Code  Gb  dwrite.o [6]
+__exit                  0x0000196d   0x14  Code  Gb  exit.o [6]
+__iar_Fail_s            0x00000e31   0x1e  Code  Gb  xfail_s.o [3]
+__iar_Memchr            0x00000ead         Code  Gb  memchr.o [5]
+__iar_Strchr            0x00000e19         Code  Gb  strchr.o [5]
+__iar_close_ttio        0x00001981   0x2c  Code  Gb  iarttio.o [6]
+__iar_dadd              0x0000148d         Code  Gb  DblSub.o [4]
+__iar_data_init3        0x000028a9   0x28  Code  Gb  data_init.o [5]
+__iar_dsub              0x00001805         Code  Gb  DblAdd.o [4]
+__iar_dsubStart         0x00001817         Code  Gb  DblAdd.o [4]
+__iar_frexp             0x0000121d         Code  Gb  frexp.o [4]
+__iar_frexpl            0x0000121d         Code  Gb  frexp.o [4]
+__iar_get_ttio          0x000019ad   0x38  Code  Gb  iarttio.o [6]
+__iar_init_vfp          0x000028d1         Code  Gb  fpinit_M.o [4]
+__iar_ldexp64           0x000012e1         Code  Gb  ldexp.o [4]
+__iar_lookup_ttioh      0x000019e9    0x8  Code  Gb  XShttio.o [3]
+__iar_packbits_init_single3
+                        0x00002871   0x38  Code  Gb  packbits_init_single.o [5]
+__iar_program_start     0x00002a05         Code  Gb  cstartup_M.o [5]
+__iar_scalbln64         0x000012e1         Code  Gb  ldexp.o [4]
+__iar_scalbn64          0x000012e1         Code  Gb  ldexp.o [4]
+__iar_sh_stdout         0x00002993   0x20  Code  Gb  iarwstd.o [6]
+__iar_sh_write          0x000028f3   0x22  Code  Gb  iarwrite.o [6]
+__iar_softfp___iar_frexp64
+                        0x00001211         Code  Gb  frexp.o [4]
+__iar_softfp_frexp      0x00001211         Code  Gb  frexp.o [4]
+__iar_softfp_frexpl     0x00001211         Code  Gb  frexp.o [4]
+__iar_systems$$module {Abs}
+                        0x00000001         Data  Gb  command line/config [2]
+__iar_ttio_handles      0x20000000    0x8  Data  Lc  XShttio.o [3]
+__iar_unaligned_memcpy  0x00001199         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned_memcpy4
+                        0x000011b9         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned_memcpy8
+                        0x000011b9         Code  Gb  ABImemcpy_unaligned.o [5]
+__low_level_init        0x000029cf    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000         Data  Gb  vector_table_M.o [5]
+__write                 0x00002965   0x10  Code  Gb  write.o [6]
+_call_main              0x000029c1         Code  Gb  cmain.o [5]
+_exit                   0x000029d9         Code  Gb  cexit.o [5]
+_main                   0x000029cb         Code  Gb  cmain.o [5]
+abort                   0x000017eb    0x6  Code  Gb  abort.o [3]
+backgroundColor         0x20000012    0x2  Data  Gb  SSD2119_Display.o [1]
+convertColor            0x00002031   0x20  Code  Gb  SSD2119_Display.o [1]
+cursorX                 0x2000000c    0x2  Data  Gb  SSD2119_Display.o [1]
+cursorY                 0x2000000e    0x2  Data  Gb  SSD2119_Display.o [1]
+exit                    0x000029d3    0x4  Code  Gb  exit.o [3]
+ldexp                   0x000012e1         Code  Gb  ldexp.o [4]
+ldexpl                  0x000012e1         Code  Gb  ldexp.o [4]
+main                    0x00002811   0x60  Code  Gb  main.o [1]
+memchr                  0x00000ead         Code  Gb  memchr.o [5]
+printf                  0x00002609   0x28  Code  Gb  printf.o [3]
+putchar                 0x00002945   0x20  Code  Gb  putchar.o [3]
+scalbln                 0x000012e1         Code  Gb  ldexp.o [4]
+scalblnl                0x000012e1         Code  Gb  ldexp.o [4]
+scalbn                  0x000012e1         Code  Gb  ldexp.o [4]
+scalbnl                 0x000012e1         Code  Gb  ldexp.o [4]
+scale                   0x000006e1   0x46  Code  Lc  xprintffull_nomb.o [3]
+sec_hand                0x20000008    0x4  Data  Lc  xfail_s.o [3]
+strchr                  0x00000e19         Code  Gb  strchr.o [5]
+strlen                  0x00000e75         Code  Gb  strlen.o [5]
+textColor               0x20000010    0x2  Data  Gb  SSD2119_Display.o [1]
+
+
+[1] = D:\Desktop\Lab474\lab4\task1a\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  10 228 bytes of readonly  code memory
+     552 bytes of readonly  data memory
+  32 788 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
